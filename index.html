@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wigner</title>
+    <title>Гифка и Фоновый Звук</title>
     <style>
-        #image {
-            display: none; /* Скрываем картинку изначально */
-            margin-top: 20px;
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Скрываем прокрутку */
+        }
+        #gif {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Центрируем гифку */
         }
     </style>
 </head>
 <body>
-    <button onclick="showImageAndPlaySound()">Показать Картинку и Проиграть Звук</button>
-    
-    <img id="image" src="cover-screamer.jpg" alt="Картинка" width="1900">
-    <audio id="audio" src="123.mp3"></audio>
-
-    <script>
-        function showImageAndPlaySound() {
-            // Показываем картинку
-            document.getElementById('image').style.display = 'block';
-            // Проигрываем звук
-            document.getElementById('audio').play();
-        }
-    </script>
+    <img id="gif" src="гифка.gif" alt="Гифка">
+    <audio autoplay loop>
+        <source src="123.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
 </body>
 </html>
