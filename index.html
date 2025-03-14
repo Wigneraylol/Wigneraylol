@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wigner</title>
+    <style>
+        #image {
+            display: none; /* Скрываем картинку изначально */
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Wigner</h1>
-    <p>Ссылка на канал: <a href="https://www.youtube.com/@wigneraylol" target="_blank">Перейти на канал</a></p>
+    <button onclick="showImageAndPlaySound()">Показать Картинку и Проиграть Звук</button>
     
-    <h2></h2>
-    <iframe width="1600" height="900" src="https://www.youtube.com/embed/kt10Lw8p5KU" frameborder="0" allowfullscreen></iframe>
+    <img id="image" src="cover-screamer.jpg" alt="Картинка" width="1900">
+    <audio id="audio" src="123.mp3"></audio>
+
+    <script>
+        function showImageAndPlaySound() {
+            // Показываем картинку
+            document.getElementById('image').style.display = 'block';
+            // Проигрываем звук
+            document.getElementById('audio').play();
+        }
+    </script>
 </body>
 </html>
